@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "homepages",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "howStep1Title": {
+      "type": "string"
+    },
+    "howStep1Body": {
+      "type": "text"
+    },
+    "howStep2Title": {
+      "type": "string"
+    },
+    "howStep2Body": {
+      "type": "text"
+    },
+    "howStep3Title": {
+      "type": "string"
+    },
+    "howStep3Body": {
+      "type": "text"
+    }
+  }
+}
