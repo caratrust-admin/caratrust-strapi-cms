@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "termss",
+  "info": {
+    "singularName": "terms",
+    "pluralName": "termss",
+    "displayName": "Terms"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "termsTitle": {
+      "type": "string"
+    },
+    "termsBody": {
+      "type": "richtext"
+    }
+  }
+}
