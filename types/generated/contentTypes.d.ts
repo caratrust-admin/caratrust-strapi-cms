@@ -746,6 +746,7 @@ export interface ApiLocationLocation extends Schema.CollectionType {
     singularName: 'location';
     pluralName: 'locations';
     displayName: 'Location';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -754,8 +755,8 @@ export interface ApiLocationLocation extends Schema.CollectionType {
     Name: Attribute.String;
     Address: Attribute.Text;
     Phone: Attribute.String;
-    Hours: Attribute.String;
     GooglePlaceId: Attribute.String;
+    storeUrl: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
