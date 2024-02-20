@@ -683,6 +683,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
     singularName: 'faq';
     pluralName: 'faqs';
     displayName: 'FAQ';
+    description: '';
   };
   options: {
     draftAndPublish: true;
@@ -690,6 +691,7 @@ export interface ApiFaqFaq extends Schema.CollectionType {
   attributes: {
     question: Attribute.String;
     answer: Attribute.Text;
+    permalink: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
