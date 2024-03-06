@@ -702,6 +702,40 @@ export interface ApiFaqFaq extends Schema.CollectionType {
   };
 }
 
+export interface ApiFooterFooter extends Schema.SingleType {
+  collectionName: 'footers';
+  info: {
+    singularName: 'footer';
+    pluralName: 'footers';
+    displayName: 'Footer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    footerAddress: Attribute.String;
+    urlFacebook: Attribute.String;
+    urlInstagram: Attribute.String;
+    urlTwitter: Attribute.String;
+    urlYoutube: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::footer.footer',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiHomepageHomepage extends Schema.SingleType {
   collectionName: 'homepages';
   info: {
@@ -724,6 +758,7 @@ export interface ApiHomepageHomepage extends Schema.SingleType {
     whyBullet2: Attribute.Text;
     whyBullet3: Attribute.Text;
     journeyCopy: Attribute.Text;
+    homePartnersTitle: Attribute.String;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;
@@ -893,6 +928,38 @@ export interface ApiRefundsRefunds extends Schema.SingleType {
   };
 }
 
+export interface ApiSellformSellform extends Schema.SingleType {
+  collectionName: 'sellforms';
+  info: {
+    singularName: 'sellform';
+    pluralName: 'sellforms';
+    displayName: 'Sell Form';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    sellJewelryTypePrompt: Attribute.String;
+    sellDeclineTitle: Attribute.String;
+    sellDeclineCopy: Attribute.String;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<
+      'api::sellform.sellform',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<
+      'api::sellform.sellform',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTermsTerms extends Schema.SingleType {
   collectionName: 'termss';
   info: {
@@ -941,10 +1008,12 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::faq.faq': ApiFaqFaq;
+      'api::footer.footer': ApiFooterFooter;
       'api::homepage.homepage': ApiHomepageHomepage;
       'api::location.location': ApiLocationLocation;
       'api::privacy.privacy': ApiPrivacyPrivacy;
       'api::refunds.refunds': ApiRefundsRefunds;
+      'api::sellform.sellform': ApiSellformSellform;
       'api::terms.terms': ApiTermsTerms;
     }
   }

@@ -41,6 +41,9 @@
     },
     "journeyCopy": {
       "type": "text"
+    },
+    "homePartnersTitle": {
+      "type": "string"
     }
   }
 }
